@@ -1,0 +1,52 @@
+################################################################################
+# README                                                                       #
+#                                                                              #
+# Description: This file serves as a README and documentation for Recitaion 1. #
+#                                                                              #
+# Authors: Athula Balachandran <abalacha@cs.cmu.edu>,                          #
+#          Wolf Richter <wolf@cs.cmu.edu>                                      #
+#                                                                              #
+################################################################################
+
+
+
+
+[TOC-1] Table of Contents
+--------------------------------------------------------------------------------
+
+        [TOC-1] Table of Contents
+        [DES-2] Description of Files
+        [RUN-3] How to Run
+
+
+
+
+[DES-2] Description of Files
+--------------------------------------------------------------------------------
+
+Here is a listing of all files associated with Recitation 1 and what their'
+purpose is:
+
+                    .../README                  - Current document 
+                    .../recitation1.pdf         - Provided slides/reference
+                    .../src/echo_client.c       - Simple echo network client
+                    .../src/echo_server.c       - Simple echo network server
+                    .../src/Makefile            - Contains rules for make
+
+
+
+
+[RUN-3] How to Run
+--------------------------------------------------------------------------------
+
+Building and executing the echo code should be very simple:
+
+                    cd src
+                    make
+                    ./echo_server
+                    ./echo_client localhost 9999
+
+This should allow you to input characters on stdin which will be sent to the
+echo server.  The echo server has a hard-coded serving port of 9999.  Any input
+characters to stdin will be flushed to the server on return, and any bytes
+received from the server will appear on stdout.
