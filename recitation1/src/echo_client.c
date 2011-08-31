@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
         
     int status, sock;
     struct addrinfo hints;
-    struct addrinfo *servinfo, *p; //will point to the results
+    struct addrinfo *servinfo; //will point to the results
     hints.ai_family = AF_UNSPEC;  //don't care IPv4 or IPv6
     hints.ai_socktype = SOCK_STREAM; //TCP stream sockets
     hints.ai_flags = AI_PASSIVE; //fill in my IP for me
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
     
     int bytes_received;
     fprintf(stdout, "Sending %s", msg);
-    int n = send(sock, msg , strlen(msg), 0);
+    send(sock, msg , strlen(msg), 0);
     if((bytes_received = recv(sock, buf, BUF_SIZE, 0)) > 1)
     {
         buf[bytes_received] = '\0';
