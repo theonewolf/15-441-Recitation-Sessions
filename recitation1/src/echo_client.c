@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
     if (argc != 3)
     {
         fprintf(stderr, "usage: %s <server-ip> <port>",argv[0]);
-        return 1;
+        return EXIT_FAILURE;
     }
 
     char buf[BUF_SIZE];
@@ -43,19 +43,19 @@ int main(int argc, char* argv[])
     if ((status = getaddrinfo(argv[1], argv[2], &hints, &servinfo)) != 0) 
     {
         fprintf(stderr, "getaddrinfo error: %s \n", gai_strerror(status));
-        return 1;
+        return EXIT_FAILURE;
     }
 
     if((sock = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol)) == -1)
     {
         fprintf(stderr, "Socket failed");
-        return 1;
+        return EXIT_FAILURE;
     }
     
     if (connect (sock, servinfo->ai_addr, servinfo->ai_addrlen) == -1)
     {
         fprintf(stderr, "Connect");
-        return 1;
+        return EXIT_FAILURE;
     }
         
     char msg[BUF_SIZE]; 
@@ -72,5 +72,5 @@ int main(int argc, char* argv[])
 
     freeaddrinfo(servinfo);
     close(sock);    
-    return 0;
+    return EXIT_SUCCESS;
 }
