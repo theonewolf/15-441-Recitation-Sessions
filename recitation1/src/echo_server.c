@@ -72,6 +72,7 @@ int main(int argc, char* argv[])
     /* finally, loop waiting for input and then write it back */
     while (1)
     {
+       cli_size = sizeof(cli_addr);
        if ((client_sock = accept(sock, (struct sockaddr *) &cli_addr,
                                  &cli_size)) == -1)
        {
