@@ -32,6 +32,7 @@ purpose is:
                     .../src/echo_client.c       - Simple echo network client
                     .../src/echo_server.c       - Simple echo network server
                     .../src/Makefile            - Contains rules for make
+                    .../src/recitation1.odp     - OpenOffice source recitation1
 
 
 
