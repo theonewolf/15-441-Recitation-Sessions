@@ -1,0 +1,53 @@
+################################################################################
+# README                                                                       #
+#                                                                              #
+# Description: This file serves as a README and documentation for Recitaion 2. #
+#                                                                              #
+# Authors: Athula Balachandran <abalacha@cs.cmu.edu>,                          #
+#          Wolf Richter <wolf@cs.cmu.edu>                                      #
+#                                                                              #
+################################################################################
+
+
+
+
+[TOC-1] Table of Contents
+--------------------------------------------------------------------------------
+
+        [TOC-1] Table of Contents
+        [DES-2] Description of Files
+        [RUN-3] How to Run
+
+
+
+
+[DES-2] Description of Files
+--------------------------------------------------------------------------------
+
+Here is a listing of all files associated with Recitation 1 and what their'
+purpose is:
+
+                    .../README                  - Current document 
+                    .../recitation2.pdf         - Provided slides/reference
+                    .../src/echo_client.c       - Copied from recitation1
+                    .../src/echo_server.c       - Copied from recitation1
+                    .../src/Makefile            - Updated from recitation1
+                    .../src/liso.c              - Sneak peek on Project 1
+                    .../src/git.tar.gz          - Example git repository+clone
+                    .../src/svn.tar.gz          - Example svn repository+wc's
+                    .../src/recitation2.odp     - OpenOffice recitation2 source
+
+
+
+
+[RUN-3] How to Run
+--------------------------------------------------------------------------------
+
+You may build and run the echo client and echo server exactly as in Recitation 1
+with the Makefile (it is semantically the same, if syntactically a bit
+different).
+
+Examine liso.c for clues on structuring Project 1 (start thinking early!).
+
+Play around with svn and git using the provided sample repositories, or feel
+free to create your own.
