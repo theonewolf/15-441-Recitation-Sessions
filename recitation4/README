@@ -41,7 +41,8 @@ purpose is:
 --------------------------------------------------------------------------------
 
 You may directly execute the Python scripts.  When running webapp.py, it will
-start a web server running locally.  Go to this URL to see results:
+start a web server running locally.  You need to first install Flask.  You can
+do this by using Python's 'easy_install flask'.  Go to this URL to see results:
 
                     http://localhost:5000
 
