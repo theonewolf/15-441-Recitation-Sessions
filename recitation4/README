@@ -1,0 +1,53 @@
+################################################################################
+# README                                                                       #
+#                                                                              #
+# Description: This file serves as a README and documentation for Recitation 4.#
+#                                                                              #
+# Authors: Athula Balachandran <abalacha@cs.cmu.edu>,                          #
+#          Wolf Richter <wolf@cs.cmu.edu>                                      #
+#                                                                              #
+################################################################################
+
+
+
+
+[TOC-1] Table of Contents
+--------------------------------------------------------------------------------
+
+        [TOC-1] Table of Contents
+        [DES-2] Description of Files
+        [RUN-3] How to Run
+
+
+
+
+[DES-2] Description of Files
+--------------------------------------------------------------------------------
+
+Here is a listing of all files associated with Recitation 4 and what their
+purpose is:
+
+                    .../README                  - Current document 
+                    .../recitation4.pdf         - Provided slides/reference
+                    .../src/quicksort.py        - Quicksort example code
+                    .../src/webapp.py           - Webapp example code
+                    .../src/recitation4.odp     - OpenOffice recitation2 source
+                    .../src/wiki_quick.png      - Quicksort Wikipedia Screen
+
+
+
+
+[RUN-3] How to Run
+--------------------------------------------------------------------------------
+
+You may directly execute the Python scripts.  When running webapp.py, it will
+start a web server running locally.  Go to this URL to see results:
+
+                    http://localhost:5000
+
+It defaults to port 5000.
+
+For trying out the quicksort.py script, you may also just run it directly.  You
+can see the doctest module in action with this command:
+
+                    python quicksort.py -v
