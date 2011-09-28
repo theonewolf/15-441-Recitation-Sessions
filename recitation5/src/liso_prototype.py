@@ -74,7 +74,7 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
 
         # format datestring
         datestring = datetime.datetime.utcfromtimestamp(datestring)
-        datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S %Z')
+        datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
         # get proper mimetype
         try:
