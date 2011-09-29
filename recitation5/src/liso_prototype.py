@@ -42,7 +42,7 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         version = self.request_version.split('/')
         version = version[1].split('.')
         if version[0] != '1' or version[1] != '1':
-            return505()
+            self.return505()
             return None
 
     def do_GET(self):
