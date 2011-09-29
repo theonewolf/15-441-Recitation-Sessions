@@ -61,8 +61,6 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         message_body = ''
         basename,extension = os.path.splitext(full_path)
         
-        print 'doing GET on %s' % (full_path)
-
         # read in full file
         try:
             datestring = os.path.getmtime(full_path)
