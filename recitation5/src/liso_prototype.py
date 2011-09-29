@@ -114,7 +114,6 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         datestring = datetime.datetime.utcfromtimestamp(datestring)
         datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S %Z')
 
-
         # get proper mimetype
         try:
             mimetype = MIME[extension.lower()]
