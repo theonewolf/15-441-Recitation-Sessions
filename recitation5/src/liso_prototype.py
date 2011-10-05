@@ -42,7 +42,7 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         version = self.request_version.split('/')
         version = version[1].split('.')
         if version[0] != '1' or version[1] != '1':
-            return505
+            self.return505()
             return None
 
     def do_GET(self):
@@ -61,8 +61,6 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         message_body = ''
         basename,extension = os.path.splitext(full_path)
         
-        print 'doing GET on %s' % (full_path)
-
         # read in full file
         try:
             datestring = os.path.getmtime(full_path)
@@ -74,7 +72,7 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
 
         # format datestring
         datestring = datetime.datetime.utcfromtimestamp(datestring)
-        datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S %Z')
+        datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
         # get proper mimetype
         try:
@@ -108,8 +106,13 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         message_body = ''
         basename,extension = os.path.splitext(full_path)
         
-        # read in full file
+        # get stats
+        datestring = os.path.getmtime(full_path)
         fsize = os.path.getsize(full_path)
+
+        # format datestring
+        datestring = datetime.datetime.utcfromtimestamp(datestring)
+        datestring = datestring.strftime('%a, %d %b %Y %H:%M:%S %Z')
 
         # get proper mimetype
         try:
@@ -122,6 +125,7 @@ class LisoHandlerPrototype(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header('Connection', 'close')
         self.send_header('Content-Type', mimetype)
         self.send_header('Content-Length', fsize)
+        self.send_header('Last-Modified', datestring)
         self.end_headers()
         self.close_connection = 1
 
